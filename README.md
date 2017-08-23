@@ -12,7 +12,7 @@ Add to repositories:
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://gitlab.com/pixney/fiske-theme"
+        "url": "https://github.com/Pixney/fiske-theme"
     }
  ]
 ```
