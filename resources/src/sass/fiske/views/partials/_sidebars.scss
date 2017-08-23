@@ -1,0 +1,93 @@
+$sidebarAlphaBackgroundColor: #67686b;
+$sidebarBetaBackgroundColor: #737478;
+$sidebarAlphaWidth:170px;
+$sidebarBetaWidth:160px;
+
+.Main
+{
+    margin-left:$sidebarAlphaWidth+$sidebarBetaWidth;
+}
+.Sidebar
+{
+    position: fixed;
+    top: 90px;
+
+    width: 200px;
+    height: 100%;
+    ul
+    {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+    ul li,
+    ul li a
+    {
+        line-height: 1;
+
+        color: #fff;
+
+        @include Trans();
+    }
+    ul li a
+    {
+        font-size: 14px;
+        font-weight: 400;
+
+        display: block;
+
+        padding: 10px 15px;
+
+        text-decoration: none;
+    }
+    ul li a .title
+    {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    ul li.active a
+    {
+        font-weight: 600;
+    }
+    ul ul
+    {
+        display: none;
+    }
+    .icon
+    {
+        display: none;
+
+        margin-right: 10px;
+    }
+}
+
+.Sidebar__Alpha
+{
+    left: 0;
+    width:$sidebarAlphaWidth;
+    background: $sidebarAlphaBackgroundColor;
+    ul li.active a,
+    ul li a:hover
+    {
+        background: $sidebarBetaBackgroundColor;
+    }
+}
+
+
+.Sidebar__Beta
+{
+    left: $sidebarAlphaWidth;
+    width:$sidebarBetaWidth;
+    background: $sidebarBetaBackgroundColor;
+    ul li a
+    {
+        //border-left:2px solid #eee;
+    }
+    ul li.active a,
+    ul li a:hover
+    {
+        color: $sidebarBetaBackgroundColor;
+        background: #f3f3f3;
+    }
+}

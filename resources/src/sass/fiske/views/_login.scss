@@ -1,0 +1,147 @@
+$LoginBackground:#8a2be2;
+
+.LoginWrapper
+{
+    width: 600px;
+}
+.Login
+{
+    display: flex;
+
+    height: calc(100vh - 50px);
+
+    background: $LoginBackground;
+
+    justify-content: center;
+    align-items: center;
+}
+.Login__Title
+{
+    font-size: 18px;
+
+    margin: 0;
+    padding: 15px;
+
+    text-align: center;
+color:#fff;
+    background: darken($LoginBackground,10%);
+}
+.Login form
+{
+    padding: 25px 50px;
+
+    background: #fff;
+    box-shadow: 0 9px 20px -10px rgba(100, 100, 100, .4);
+}
+.Login__Input
+{
+    position: relative;
+    .form-control::-webkit-input-placeholder
+    {
+        color: #666;
+    }
+    .form-control:-moz-placeholder
+    {
+        color: #666;
+    }
+    .form-control::-moz-placeholder
+    {
+        color: #666;
+    }
+    .form-control:-ms-input-placeholder
+    {
+        color: #666;
+    }
+    .form-control::-ms-input-placeholder
+    {
+        color: #666;
+    }
+}
+.Login__Input input
+{
+    padding: 1rem;
+
+    border: 1px solid transparent;
+    border-bottom: 1px solid #transparent;
+    border-radius: 0;
+    background: #fafafa;
+
+    @include Trans();
+    &:after
+    {
+        content: 'a';
+    }
+    &:focus
+    {
+        border-color: transparent;
+        outline: none;
+        background: #fafafa;
+        background-image: none;
+        box-shadow: 0 0;
+    }
+}
+
+.Login__InputBorder
+{
+    position: absolute;
+    bottom: 1px;
+
+    width: 0;
+    height: 1px;
+
+    background: $LoginBackground;
+
+    @include Trans(400ms);
+}
+.Login__Input input:focus + .Login__InputBorder
+{
+    width: 100%;
+}
+
+.LoginFooter
+{
+	display:flex;
+	padding:0 15px;
+    height: 50px;
+	justify-content:flex-end;
+	align-items:center;
+    background: $LoginBackground;
+    color:#fff;
+    a 
+    {
+    	color:inherit;
+    	padding:0 15px;
+    	font-size:13px;
+    }
+}
+
+.Login__Actions
+{
+    display: flex;
+
+    padding: 15px;
+
+    justify-content: space-between;
+    align-items:center;
+    .btn
+    {
+        padding: 10px 20px;
+
+        color: #fff;
+        background: $LoginBackground;
+    }
+}
+.Login__ForgotPassword
+{
+    padding: 15px;
+
+    text-align: center;
+
+    color: #fff;
+    a
+    {
+        font-size: inherit;
+
+        color: inherit;
+    }
+}

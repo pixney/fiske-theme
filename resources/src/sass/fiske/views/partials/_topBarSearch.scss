@@ -1,0 +1,41 @@
+.TopBarSearch
+{
+    position: relative;
+
+    width: 300px;
+    margin-right: 5px;
+    .form-control::-webkit-input-placeholder
+    {
+        color: #333;
+    }  /* WebKit, Blink, Edge */
+    .form-control:-moz-placeholder
+    {
+        color: #333;
+    }  /* Mozilla Firefox 4 to 18 */
+    .form-control::-moz-placeholder
+    {
+        color: #333;
+    }  /* Mozilla Firefox 19+ */
+    .form-control:-ms-input-placeholder
+    {
+        color: #333;
+    }  /* Internet Explorer 10-11 */
+    .form-control::-ms-input-placeholder
+    {
+        color: #333;
+    }  /* Microsoft Edge */
+}
+
+.TopBarSearch.open .dropdown-menu
+{
+    display: block;
+
+    width: 300px;
+}
+
+
+
+.TopBarSearch .search-bar
+{
+    border: 0;
+}

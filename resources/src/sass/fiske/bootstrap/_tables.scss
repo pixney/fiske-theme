@@ -1,0 +1,80 @@
+.table
+{
+    background: #fff;
+
+   
+}
+.table th,
+.table td
+{
+    margin: 0;
+    padding: 0;
+    padding: 4px 10px;
+
+    vertical-align: middle;
+
+    border: 0;
+}
+.table thead th
+{
+    @extend .FiskeHeaders;
+}
+.table thead th
+{
+    font-weight: 600;
+    padding:6px 10px 1px;
+}
+
+
+.table .btn
+{
+    i.glyphicons,
+    i.fa
+    {
+        font-size: 11px;
+
+        position: relative;
+        top: 2px;
+    }
+    i.fa
+    {
+        font-size: 12px;
+
+        top: 0;
+    }
+}
+
+
+.table td
+{
+    @include Trans();
+}
+.table tr:first-child td
+{
+    border-top: 10px solid transparent;
+}
+.table tr:nth-child(odd) td
+{
+    background: #fff;
+}
+.table tr:nth-child(even) td
+{
+    background: #fafafa;
+}
+.table tr:hover td
+{
+    background: #f3f3f3;
+}
+
+
+.table th a,
+.table thead th 
+{
+    color:#fff;
+    font-weight:500;
+}
+.table thead th i
+{
+    color:#eee !important;
+}
+

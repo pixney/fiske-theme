@@ -1,0 +1,182 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav
+{
+    display: flex;
+
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    flex-wrap: wrap;
+}
+
+.nav-link
+{
+    display: block;
+
+    padding: $nav-link-padding-y $nav-link-padding-x;
+
+    @include hover-focus
+    {
+        text-decoration: none;
+    }
+    // Disabled state lightens text
+    &.disabled
+    {
+        color: $nav-link-disabled-color;
+    }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs,
+.nav-sections
+{
+    border-bottom: 0;
+    background: #737478;
+    .nav-item
+    {
+        margin-bottom: -$nav-tabs-border-width;
+    }
+    .nav-link
+    {
+        color: #fff;
+        border: $nav-tabs-border-width solid transparent;
+
+        
+        &.disabled
+        {
+            color: $nav-link-disabled-color;
+            border-color: transparent;
+            background-color: transparent;
+        }
+    }
+    .nav-link.active,
+    .nav-item.active,
+    .nav-item.show .nav-link
+    {
+        color: $nav-tabs-link-active-color;
+        border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-bg;
+        background-color: #fff;
+        a
+        {
+            color: #000;
+        }
+    }
+    .dropdown-menu
+    {
+        // Make dropdown border overlap tab border
+        margin-top: -$nav-tabs-border-width;
+        // Remove the top rounded corners here since there is a hard edge above the menu
+
+        @include border-top-radius(0);
+    }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills
+{
+    .nav-link
+    {
+        @include border-radius($nav-pills-border-radius);
+        &.active,
+        .show > &
+        {
+            color: $nav-pills-link-active-color;
+            background-color: $nav-pills-link-active-bg;
+        }
+    }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill
+{
+    .nav-item
+    {
+        text-align: center;
+
+        flex: 1 1 auto;
+    }
+}
+
+.nav-justified
+{
+    .nav-item
+    {
+        text-align: center;
+
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content
+{
+    > .tab-pane
+    {
+        display: none;
+    }
+    > .active
+    {
+        display: block;
+    }
+}
+
+.card-block
+{
+    > .tab-pane
+    {
+        display: none;
+    }
+    > .active
+    {
+        display: block;
+    }
+}
+
+.nav-tabs,
+.nav-sections 
+{
+    .nav-item
+    {
+        .nav-link
+        {
+            color:#fff;
+            font-size:14px;
+            @include Trans();
+        }
+        &:hover .nav-link 
+        {
+            background:lighten(#737478,5%);
+        }
+        &.active .nav-link,
+        &.active:hover .nav-link
+        {
+            color:#737478;
+            background:#fff;
+            font-weight:600;
+        }
+
+        
+    }
+}

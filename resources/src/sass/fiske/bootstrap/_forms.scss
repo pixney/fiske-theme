@@ -1,0 +1,88 @@
+.form
+{
+   
+}
+
+.form .field-group
+{
+    padding: 11px 10px 15px;
+    &:nth-child(odd)
+    {
+        background: #fff;
+    }
+    &:nth-child(even)
+    {
+        background: #fafafa;
+    }
+}
+
+.form .form-group
+{
+    margin: 0;
+}
+
+.form .text-muted,
+.form .help-block
+{
+    font-size: 13px;
+    
+
+    margin: 0 0 5px;
+}
+.form .text-warning
+{
+    color: #e08e34 !important;
+    font-size:inherit;
+    font-style: italic;
+}
+
+.form .control-label
+{
+    font-size: 14px;
+    font-weight: 500;
+
+    display: flex;
+
+    min-height: 26px;
+    margin: 0;
+
+    justify-content: flex-start;
+    .required
+    {
+        margin-left: 10px;
+
+        color: red;
+    }
+    .btn-group
+    {
+        margin-left: auto;
+        .btn-default
+        {
+            font-weight: 500;
+
+            color: #333;
+            &:before
+            {
+                font-weight: 300;
+                font-style: italic;
+
+                content: 'Change Language: ';
+
+                color: #c5c5c5;
+            }
+        }
+        &:focus
+        {
+            outline: none;
+        }
+    }
+    .btn-group.open
+    {
+        .dropdown-menu
+        {
+            display: block;
+
+            width: 100%;
+        }
+    }
+}

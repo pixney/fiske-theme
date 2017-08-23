@@ -1,0 +1,108 @@
+.table-responsive
+{
+    box-shadow: 0px 0px 10px 0px rgba(100, 100, 100, 0.1)
+}
+.table
+{
+    margin-bottom: 0;
+
+
+    th,
+    td
+    {
+        padding: .5rem;
+
+        vertical-align: middle;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5
+        {
+            &:last-of-type
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+    td
+    {
+        padding: .65rem .5rem;
+    }
+    > thead, > tbody, > tfoot
+    {
+        > tr
+        {
+            &.dragged
+            {
+                opacity: .2;
+            }
+            > th, > td
+            {
+                vertical-align: middle;
+                .handle:hover
+                {
+                    cursor: move;
+                }
+            }
+        }
+    }
+    thead th
+    {
+        vertical-align: bottom;
+
+        border-bottom: (2 * 1px) solid $table-border-color;
+        a
+        {
+            color: $link-color;
+        }
+    }
+}
+
+.table-filters
+{
+    padding: 1rem;
+
+    border-top: 1px solid $table-border-color;
+    .form-group
+    {
+        margin-bottom: 0 !important;
+    }
+}
+
+.no-results
+{
+    padding: 1rem;
+
+    border-top: 1px solid $table-border-color;
+}
+
+tfoot th 
+{
+    padding:0 !important;
+
+    .btn 
+    {
+        margin:8px 4px;
+        &:first-child 
+        {
+            margin-left:8px;
+        }
+    }
+}
+
+.table thead th,
+.table thead th a,
+{
+    border-top:0;
+    border-bottom:0;
+    text-transform:none;
+    letter-spacing:0;
+    font-size:15px;
+    color:#fff;
+}
+
+.table thead th .text-muted 
+{
+    color:#fff !important;
+}

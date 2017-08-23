@@ -1,0 +1,48 @@
+.btn 
+{
+	padding:5px 10px;
+	border:0;
+	border-radius:0;
+	font-size:13px;
+
+	&:focus,
+	&:active,
+	&:focus:active
+	{
+		outline:none;
+		box-shadow:0 0;
+		border:0;
+	}
+}
+
+.btn-info
+{
+	background-color:#00d1f3;
+	&:hover 
+	{
+		background:darken(#00d1f3,5%);
+	}
+}
+.btn-danger
+{
+	background-color:#fb2568;
+	&:hover 
+	{
+		background:darken(#fb2568,10%);
+	}
+}
+.btn-success
+{
+	background-color:#22e601;
+	&:hover 
+	{
+		background:darken(#22e601,5%);
+	}
+	
+}
+
+.btn.btn-warning
+{
+	color:#fff;
+
+}

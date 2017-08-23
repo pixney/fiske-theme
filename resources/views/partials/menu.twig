@@ -1,0 +1,11 @@
+{% import "pixney.theme.fiske::macros/menu.twig" as menu %}
+
+<div id="menu" class="Sidebar Sidebar__Beta scrollbar">
+
+    <ul>
+        {% for section in template.cp.sections.root().visible() %}
+            {{ menu.section(template.cp.sections, section) }}
+        {% endfor %}
+    </ul>
+
+</div>

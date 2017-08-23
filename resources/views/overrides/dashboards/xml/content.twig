@@ -1,0 +1,23 @@
+{% if widget.data.items is not empty %}
+    <ul class="Media">
+        {% for item in widget.data.items %}
+            <li>
+                <a href="{{ item.get_permalink() }}" target="_blank">
+                    <h2>
+                    <small>
+                    {{ item.get_date()|date('F j, Y') }}
+                    </small>
+                    {{ item.get_title() }}
+                    </h2>
+                    {{ item.get_description()|striptags }}
+                </a>
+            </li>
+            {% if not loop.last %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% elseif is_array(widget.data.items) %}
+    <p>{{ trans('anomaly.extension.xml_feed_widget::message.empty') }}</p>
+{% else %}
+    <p>{{ trans('anomaly.extension.xml_feed_widget::message.error') }}</p>
+{% endif %}

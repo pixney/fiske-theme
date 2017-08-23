@@ -1,0 +1,27 @@
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>{{ trans('pixney.theme.fiske::control_panel.title') }}
+    &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+
+<!-- Favicons -->
+{{ favicons("pixney.theme.fiske::img/favicon.png") }}
+{{ asset_add("theme.css", "pixney.theme.fiske::css/theme.css") }}
+{{ asset_add("theme.js", "pixney.theme.fiske::js/vendor/*") }}
+{{ asset_add("theme.js", "pixney.theme.fiske::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "pixney.theme.fiske::js/libraries/*") }}
+{{ asset_add("theme.js", "pixney.theme.fiske::js/theme/*") }}
+
+{{ asset_style("theme.css") }}
+
+{% if locale().isRtl() %}
+    {{ asset_add("styles.css", "pixney.theme.fiske::css/bootstrap-rtl/bootstrap.rtl.css") }}
+    {{ asset_add("styles.css", "pixney.theme.fiske::scss/theme/rtl.scss") }}
+{% endif %}
+
+{{ constants() }}
+
+{{ asset_script("theme.js") }}

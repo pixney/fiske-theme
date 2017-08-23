@@ -1,0 +1,277 @@
+//
+// Tree UI
+// --------------------------------------------------
+
+ul.tree
+{
+    padding-left: 0;
+
+    list-style: none;
+    ul,
+    ol
+    {
+        list-style: none;
+    }
+    li
+    {
+        .card
+        {
+            margin-bottom: 7px;
+            padding-right: 4px;
+
+            border: 2px solid transparent;
+            .handle
+            {
+                padding: 6px 9px;
+
+                cursor: move;
+
+                box-shadow: none;
+            }
+            > span
+            {
+                margin-left: 6px;
+            }
+        }
+        &.dragged
+        {
+            position: absolute;
+
+            margin-bottom: 1;
+
+            opacity: .5;
+        }
+        &.placeholder
+        {
+            height: 30px;
+            margin-bottom: 9px;
+
+            border: 2px dashed #eee;
+        }
+        &.collapsed
+        {
+            > .card
+            {
+                position: relative;
+                > .handle
+                {
+                    color: #fff;
+                    background: #eee;
+                }
+                > .count
+                {
+                    font-size: 9px;
+                    font-weight: bold;
+                    line-height: 14px;
+
+                    position: absolute;
+                    top: -7px;
+                    left: -7px;
+
+                    width: 14px;
+                    height: 14px;
+
+                    cursor: default;
+                    text-align: center;
+
+                    color: #fff;
+                    border-radius: 50%;
+                    background: #eee;
+                }
+            }
+            > ul
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm)
+{
+    ul.tree
+    {
+        li
+        {
+            .card
+            {
+                .buttons
+                {
+                    display: block;
+                    a
+                    {
+                        font-size: 0;
+                        .fa
+                        {
+                            font-size: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px)
+{
+    ul.tree
+    {
+        li
+        {
+            .card
+            {
+                .buttons
+                {
+                    display: block;
+
+                    margin-top: .275em;
+
+                    border-top: 1em solid #38b5e6;
+                    border-right: 1em solid transparent;
+                    border-left: 1em solid transparent;
+                    a
+                    {
+                        display: none;
+                        .fa
+                        {
+                            font-size: 18px !important;
+                        }
+                    }
+                    &:hover,
+                    &:focus
+                    {
+                        position: fixed;
+                        z-index: 400;
+                        bottom: 0;
+
+                        display: block;
+
+                        width: 100%;
+                        margin-left: -1.1em;
+                        padding-top: .75em;
+                        padding-right: .75em;
+                        padding-bottom: .75em;
+                        padding-left: .75em;
+
+                        border: none;
+                        background-color: #3e3e3e !important;
+                        a
+                        {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ul.tree
+{
+    // @extend .FiskeBoxShadow;
+}
+ul.tree
+{
+    margin-top: 15px;
+    padding: 0;
+    //padding: 15px 15px;
+
+    list-style-type: none;
+}
+
+ul.tree li .card
+{
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 5px;
+    padding: 0;
+
+    border: 0;
+    background: #fff;
+
+    justify-content: flex-start;
+    align-items: center;
+    & + ul
+    {
+        padding-left: 35px;
+    }
+    a:not(.btn)
+    {
+        font-weight: 400;
+
+        text-transform: capitalize;
+
+        color: #333;
+    }
+    a
+    {
+        cursor: pointer;
+    }
+    .text-faded
+    {
+        font-style: italic;
+
+        color: #aaa;
+    }
+    i,
+    span,
+    div
+    {
+        // flex: 1;
+    }
+    .handle
+    {
+        padding: 10px;
+
+        color: rgba(0,173,255,1);
+        //width: 15px;
+        //max-width: 15px;
+    }
+    .buttons
+    {
+        display: flex;
+        opacity:0.2;
+        @include Trans();
+
+        width: 300px;
+        margin-left: auto;
+
+        justify-content: flex-end;
+        align-items: center;
+        a 
+        {
+            padding:9px 10px 8px;
+        }
+    }
+    &:hover .buttons
+    {
+        opacity:1;
+    }
+    
+}
+ul.tree li .card .handle,
+ul.tree li .card .count
+{
+    @include Trans();
+}
+ul.tree li.collapsed
+{
+    .card .handle
+    {
+            background: #00d1f3;
+    }
+    .card .count 
+    {
+        background: #fff;
+        color:#00d1f3;
+        top:-8px;
+        left:-8px;
+        border:1px solid #00d1f3;
+        width:16px;
+        height:16px;
+        line-height: 16px;
+    }
+}
+

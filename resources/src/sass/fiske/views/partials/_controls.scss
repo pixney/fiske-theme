@@ -1,0 +1,31 @@
+.controls.card
+{
+    position: fixed;
+    z-index: 99;
+    top: 56px;
+    right: 15px;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 50%;
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    justify-content: flex-end;
+    .card-block
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-default 
+    {
+    	background:yellow;
+    	margin-left:5px;
+    	color:#fff;
+    	background:#e8d100;
+    }
+}

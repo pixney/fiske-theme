@@ -1,0 +1,27 @@
+.breadcrumb 
+{
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	background:#1f74a0;
+	background:#313131;
+	font-size:13px;
+	padding:8px 10px 9px;
+	top:50px;
+	position:fixed;
+	width:100%;
+	z-index:2;
+
+	a 
+	{
+		color:#eee;
+	}
+	.breadcrumb-item.active
+	{
+		color:#fff;
+		font-weight:700;
+	}
+	li,li a
+	{
+		font-size:13px;
+	}
+}

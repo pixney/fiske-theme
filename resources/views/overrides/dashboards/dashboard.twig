@@ -1,0 +1,13 @@
+{% extends template.layout ?: "theme::layouts/default" %}
+{% block content %}
+	{{ asset_add('styles.css', 'anomaly.module.dashboard::scss/dashboard.scss') }}
+	{{ asset_add('scripts.js', 'anomaly.module.dashboard::js/jquery-sortable.js') }}
+	{{ asset_add('scripts.js', 'anomaly.module.dashboard::js/dashboard.js') }}
+	
+	<div class="container-fluid">
+		<div class="Dashboard">
+			{{ view('module::admin/dashboards/partials/navbar', {'dashboards': dashboards}) }}
+			{{ view('module::admin/dashboards/partials/columns', {'dashboard': dashboard}) }}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+$BreadCrumbsheight:40px;
+.BreadCrumbs
+{
+	position:fixed;
+	top:50px;
+	height:$BreadCrumbsheight;
+	background:#5b5c5f;
+	width:100%;
+	padding:0 15px;
+	z-index:98;
+	li 
+	{
+		font-size:13px;
+	}
+	a 
+	{
+		font-size:inherit;
+		color:#9c9c9c;
+		font-weight:400;
+		&:hover 
+		{
+			color:#fff;
+			text-decoration: none;
+		}
+	}
+	.active
+	{
+		color:#fff;
+	}
+}
+
+.BreadCrumbs .breadcrumb
+{
+	background:transparent;
+	margin:0;
+	border-radius:0;
+	padding:0;
+	list-style-type: none;
+	line-height:$BreadCrumbsheight;
+}
