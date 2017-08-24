@@ -55,6 +55,11 @@ strong,b
     display:none;
 }
 
+$warning: #e8d100;
+$success: #22e601;
+$danger:#fb2568;
+$info:#00d1f3;
+
 
 @import "fiske/bootstrap/_cards";
 @import "fiske/bootstrap/_navbar";
@@ -74,5 +79,6 @@ strong,b
 @import "fiske/views/partials/_tree";
 @import "fiske/views/partials/_controls";
 @import "fiske/views/partials/_dashboards";
+@import "fiske/views/partials/_filter";
 
 
