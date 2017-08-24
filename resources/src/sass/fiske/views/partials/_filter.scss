@@ -1,0 +1,38 @@
+.Main .Main__Actions+.container-fluid form.form-inline
+{
+
+	input[name="filter_search"].form-control
+	{
+		border-radius: 0;
+		cursor:pointer;
+
+	}
+
+	button[type="submit"]{
+		padding: 9px 15px 10px;
+		font-weight:500;
+		margin-left:20px;
+
+	}
+	button[type="submit"]+a.btn 
+	{
+		font-weight:500;
+		background:$warning;
+		padding:8px 15px 9px;
+		color:#fff;
+
+		
+	}
+	select 
+	{
+		border-radius:0;
+		height:35px;
+	}
+
+	input[name="filter_search"].form-control,
+	select
+	{
+		margin-right:2px;
+
+	}
+}
