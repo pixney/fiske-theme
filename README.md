@@ -6,17 +6,8 @@ We are only making very minor changes to the html structure to make sure updatin
 ![Accelerante Plus](https://cdn.pbrd.co/images/GG7PL8f.png)
 
 ## Installing
-Require `"pixney/fiske-theme":"dev-master"`  
-Add to repositories:
-```
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/Pixney/fiske-theme"
-    }
- ]
-```
-
+composer require pixney/fiske-theme
+ 
 ## Roadmap
 
 

@@ -1,0 +1,59 @@
+.modal
+{
+	.modal-header
+	{
+		display:flex;
+		.close
+		{
+			order:2;
+			span 
+			{
+				font-size:25px
+			}
+		}
+
+		.modal-title 
+		{
+			order:1;
+		}
+	}
+	.modal-filter
+	{
+		margin:10px 15px;
+	}
+
+	.nav-stacked 
+	{
+		flex-direction:column;
+	}
+
+	.nav-item 
+	{
+		flex:1;
+		
+		a.nav-link 
+		{
+			color:#5b5c5f;
+			background:#fff;
+			@include Trans();
+			border-radius:0;
+			small 
+			{
+				font-size:14px;
+			}
+		}
+		a.nav-link:hover 
+		{
+			
+				background:#eee;
+				color:darken(#5b5c5f,5%);
+			
+		}
+	}
+}
+
+.modal-backdrop
+{
+	    background-color: #5b5c5f;
+    	opacity: 0.9;
+}
