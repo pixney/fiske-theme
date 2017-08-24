@@ -67,10 +67,25 @@ $sidebarBetaWidth:160px;
     left: 0;
     width:$sidebarAlphaWidth;
     background: $sidebarAlphaBackgroundColor;
+    @include Trans();
     ul li.active a,
     ul li a:hover
     {
         background: $sidebarBetaBackgroundColor;
+    }
+
+    &.open 
+    {
+        width:0;
+        & + .Sidebar__Beta 
+        {
+            left:0;
+
+            & + #main 
+            {
+                margin-left:160px;
+            }
+        }
     }
 }
 
@@ -80,6 +95,7 @@ $sidebarBetaWidth:160px;
     left: $sidebarAlphaWidth;
     width:$sidebarBetaWidth;
     background: $sidebarBetaBackgroundColor;
+    @include Trans();
     ul li a
     {
         //border-left:2px solid #eee;
