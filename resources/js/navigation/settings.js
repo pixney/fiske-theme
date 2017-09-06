@@ -1,5 +1,6 @@
 $(function () {
 
+console.log('#1');
     /**
      * Allow reordering the navigation.
      */
@@ -10,7 +11,7 @@ $(function () {
             $placeholder.closest('ul').find('.dragged').detach().insertBefore($placeholder);
         },
         onDrop: function ($item, container, _super) {
-
+            console.log('#2');
             var navigation = [];
 
             $('#sidebar > ul > li').each(function () {

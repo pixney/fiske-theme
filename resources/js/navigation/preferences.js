@@ -5,6 +5,7 @@ $(function () {
      */
     $('#sidebar > ul').sortable({
         nested: false,
+        handle:'.handle',
         placeholder: '<li class="placeholder"/>',
         afterMove: function ($placeholder) {
             $placeholder.closest('ul').find('.dragged').detach().insertBefore($placeholder);
@@ -16,7 +17,7 @@ $(function () {
             $('#sidebar > ul > li').each(function () {
                 navigation.push(String($(this).data('slug')));
             });
-
+            
             $.post(
                 REQUEST_ROOT_PATH + '/admin/preferences/themes/pixney.theme.fiske/navigation',
                 {

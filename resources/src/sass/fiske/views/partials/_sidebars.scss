@@ -1,11 +1,11 @@
 $sidebarAlphaBackgroundColor: #67686b;
 $sidebarBetaBackgroundColor: #737478;
-$sidebarAlphaWidth:170px;
-$sidebarBetaWidth:160px;
+$sidebarAlphaWidth: 170px;
+$sidebarBetaWidth: 160px;
 
 .Main
 {
-    margin-left:$sidebarAlphaWidth+$sidebarBetaWidth;
+    margin-left: $sidebarAlphaWidth+$sidebarBetaWidth;
 }
 .Sidebar
 {
@@ -65,25 +65,26 @@ $sidebarBetaWidth:160px;
 .Sidebar__Alpha
 {
     left: 0;
-    width:$sidebarAlphaWidth;
+
+    width: $sidebarAlphaWidth;
+
     background: $sidebarAlphaBackgroundColor;
+
     @include Trans();
     ul li.active a,
     ul li a:hover
     {
         background: $sidebarBetaBackgroundColor;
     }
-
-    &.open 
+    &.open
     {
-        width:0;
-        & + .Sidebar__Beta 
+        width: 0;
+        & + .Sidebar__Beta
         {
-            left:0;
-
-            & + #main 
+            left: 0;
+            & + #main
             {
-                margin-left:160px;
+                margin-left: 160px;
             }
         }
     }
@@ -93,8 +94,11 @@ $sidebarBetaWidth:160px;
 .Sidebar__Beta
 {
     left: $sidebarAlphaWidth;
-    width:$sidebarBetaWidth;
+
+    width: $sidebarBetaWidth;
+
     background: $sidebarBetaBackgroundColor;
+
     @include Trans();
     ul li a
     {
@@ -105,5 +109,36 @@ $sidebarBetaWidth:160px;
     {
         color: $sidebarBetaBackgroundColor;
         background: #f3f3f3;
+    }
+}
+
+.sortable .Sidebar__Alpha
+{
+    ul li
+    {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul li.dragged 
+    {
+        background: darken($sidebarBetaBackgroundColor,10%);
+    }
+    ul li.dragged a
+    {
+        font-weight: 600;
+
+        color: #fff;
+        background: darken($sidebarBetaBackgroundColor,10%);
+    }
+    ul li a
+    {
+        width: 100%;
+        padding-left:10px;
+        &:hover
+        {
+            //background:transparent;
+        }
     }
 }

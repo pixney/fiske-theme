@@ -2,6 +2,7 @@
 
 use Anomaly\PreferencesModule\Preference\Contract\PreferenceRepositoryInterface;
 use Anomaly\Streams\Platform\Http\Controller\AdminController;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Class PreferencesController
@@ -19,7 +20,7 @@ class PreferencesController extends AdminController
      * @param PreferenceRepositoryInterface $preferences
      */
     public function navigation(PreferenceRepositoryInterface $preferences)
-    {
+    {	
         $preferences->set('pixney.theme.fiske::navigation', serialize($this->request->get('navigation')));
     }
 }
