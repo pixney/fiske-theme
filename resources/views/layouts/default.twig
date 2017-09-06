@@ -6,7 +6,7 @@
     {% include "theme::partials/metadata" %}
 </head>
 
-<body class="{{ request_path()=='admin/preferences/themes/pixney.theme.fiske' ? 'sortable':''}}{{ locale().isRtl() ? ' rtl' }}" data-variants="8">
+<body class="{{ request_path()=='admin/preferences/themes/pixney.theme.fiske' or request_path()=='admin/settings/themes/pixney.theme.fiske' ? 'sortable':''}}{{ locale().isRtl() ? ' rtl' }}" data-variants="8">
 
 
 {#{% include "theme::partials/push" %}#}

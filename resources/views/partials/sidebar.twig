@@ -1,7 +1,7 @@
 
 <div id="sidebar" class="Sidebar Sidebar__Alpha scrollbar {{ preference_value('pixney.theme.fiske::sidebar_hover', setting_value('pixney.theme.fiske::sidebar_hover')) ? 'hover' }}">
 
-    {% if request_path()=='admin/preferences/themes/pixney.theme.fiske' %}
+    {% if request_path()=='admin/preferences/themes/pixney.theme.fiske' or request_path()=='admin/settings/themes/pixney.theme.fiske' %}
     <ul>
         {% for key, navigation in template.cp.navigation %}
             <li class="{{ navigation.active ? 'active' }} variant-border" data-slug="{{ navigation.slug }}">
