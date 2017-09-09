@@ -6,8 +6,10 @@ We are only making very minor changes to the html structure to make sure updatin
 ![Fiske](https://image.ibb.co/mX4sda/Screen_Shot_2017_09_06_at_11_18_26.png)
 
 ## Installing
+```bash
 composer require pixney/fiske-theme
- 
+```
+
 ## Roadmap
 
 
