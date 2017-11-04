@@ -1,0 +1,183 @@
+//
+// Tags Input
+// --------------------------------------------------
+
+.bootstrap-tagsinput {
+    background-color: #ffffff;
+    border: 1px solid $input-border-color;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    text-align: left;
+    font-size: 0;
+
+    .tag {
+        color: #ffffff;
+        border-radius: 3px;
+        font-size: floor((15px * 0.886)); // ~13px
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        overflow: hidden;
+        margin: 1px 5px 1px 0;
+        line-height: 15px;
+        height: 27px;
+        padding: 6px 21px;
+        transition: .25s linear;
+
+        > span {
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            text-decoration: none;
+            top: 1px;
+            width: 100%;
+            bottom: 0;
+            padding: 0 10px 0 0;
+            z-index: 2;
+            transition: opacity .25s linear;
+            filter: e(%("alpha(opacity=%d)", 0));
+            -khtml-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+
+            &:after {
+                content: "\f00d";
+                line-height: 27px;
+                font-family: "FontAwesome";
+            }
+        }
+
+        &:hover {
+            color: #ffffff;
+            padding-right: 28px;
+            padding-left: 14px;
+
+            > span {
+                opacity: 1;
+                filter: none;
+            }
+        }
+    }
+
+    input[type="text"] {
+        font-size: ceil((15px * 0.933)); // 14px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: auto !important;
+        max-width: inherit;
+        min-width: 80px;
+        vertical-align: top;
+        height: 29px;
+        color: #2c2c2c;
+
+        &:first-child {
+            height: 23px;
+            margin: 3px 0 3px;
+        }
+    }
+}
+
+.tags_clear {
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+
+.not_valid {
+    background: #fbd8db !important;
+    color: #90111a !important;
+    margin-left: 5px !important;
+}
+
+// Alternate Color
+// --------------------------------------------------
+.tagsinput-primary {
+    margin-bottom: 18px;
+
+    .bootstrap-tagsinput {
+        border-color: #2c3e50;
+        margin-bottom: 0;
+    }
+    .tag {
+        background-color: #2c3e50;
+        color: #ffffff;
+
+        &:hover {
+            background-color: mix(#2c3e50, black, 85%);
+            color: #ffffff;
+        }
+    }
+}
+
+// Contextual Variations
+// --------------------------------------------------
+
+.has-danger {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-success {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-warning {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-info {
+    .bootstrap-tagsinput {
+    }
+}
+
+// Styles for Typeahead support
+// --------------------------------------------------
+.bootstrap-tagsinput .twitter-typeahead {
+    width: auto;
+    vertical-align: top;
+
+    .tt-input {
+        min-width: 200px;
+    }
+    .tt-dropdown-menu {
+        width: auto;
+        min-width: 120px;
+        margin-top: 11px;
+    }
+}
+
+.has-danger {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-success {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-warning {
+    .bootstrap-tagsinput {
+    }
+}
+
+.has-info {
+    .bootstrap-tagsinput {
+    }
+}
+
+.tag.label.label-info
+{
+	background:#02d1f3;
+}
