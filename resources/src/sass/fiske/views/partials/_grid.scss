@@ -1,0 +1,35 @@
+.grid-item 
+{
+	overflow:hidden;
+	margin-bottom:2px;
+
+	
+
+}
+
+.grid-item.collapsed
+{
+	max-height:42px;
+
+}
+
+
+.grid-item-controls
+{
+.fa 
+	{
+		color:#fff;
+	}
+	background: #222223;
+	padding: 5px 10px;
+	display: flex;
+	justify-content: space-between;
+	
+	color:#fff;
+
+	.list-inline 
+	{
+		margin:0;
+	}
+}
+
