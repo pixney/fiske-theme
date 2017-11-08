@@ -82,10 +82,12 @@ $info:#00d1f3;
 @import "fiske/views/partials/_filter";
 @import "fiske/views/partials/_grid";
 
+
 @import "fiske/plugins/switch";
 @import "fiske/plugins/tags";
 @import "fiske/plugins/wysiwyg/redactor/redactor";
 @import "fiske/plugins/wysiwyg/overrides";
+@import "fiske/plugins/image";
 
 
 
