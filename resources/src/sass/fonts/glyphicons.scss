@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'Glyphicons Regular';
-    src: url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.eot") }}');
-    src: url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.eot") }}?#iefix') format('embedded-opentype'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.woff2") }}') format('woff2'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.woff") }}') format('woff'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.ttf") }}') format('truetype'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-regular.svg") }}#glyphiconsregular') format('svg')
+    src: url('fonts/glyphicons/glyphicons-regular.eot');
+    src: url('fonts/glyphicons/glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/glyphicons/glyphicons-regular.woff2') format('woff2'),
+    url('fonts/glyphicons/glyphicons-regular.woff') format('woff'),
+    url('fonts/glyphicons/glyphicons-regular.ttf') format('truetype'),
+    url('fonts/glyphicons/glyphicons-regular.svg#glyphiconsregular') format('svg')
 }
 
 @font-face {
     font-family: 'Glyphicons Filetypes';
-    src: url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.eot") }}');
-    src: url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.eot") }}?#iefix') format('embedded-opentype'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.woff2") }}') format('woff2'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.woff") }}') format('woff'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.ttf") }}') format('truetype'),
-    url('{{ asset_path("theme::fonts/glyphicons/glyphicons-filetypes-regular.svg") }}#glyphicons_filetypesregular') format('svg')
+    src: url('fonts/glyphicons/glyphicons-filetypes-regular.eot');
+    src: url('fonts/glyphicons/glyphicons-filetypes-regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/glyphicons/glyphicons-filetypes-regular.woff2') format('woff2'),
+    url('fonts/glyphicons/glyphicons-filetypes-regular.woff') format('woff'),
+    url('fonts/glyphicons/glyphicons-filetypes-regular.ttf') format('truetype'),
+    url('fonts/glyphicons/glyphicons-filetypes-regular.svg#glyphicons_filetypesregular') format('svg')
 }
 
 .filetypes {
